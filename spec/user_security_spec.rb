@@ -4,7 +4,7 @@ feature "User signs up" do
 
   scenario "when being logged out" do
     lambda {sign_up}.should change(User, :count).by(1)
-    expect(page).to have_contents("Welcom, alice@example.com")
+    expect(page).to have_contents("Welcome, alice@example.com")
     expect(User.first.email).to eq("alice@example.com")
   end
 
