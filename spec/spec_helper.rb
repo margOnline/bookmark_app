@@ -11,7 +11,9 @@ ENV["RACK_ENV"] = 'test'
 # determines what d/b to use.
 require './bookmark_app'
 require 'database_cleaner'
-# require 'cabybara/rspec'
+require 'capybara/rspec'
+
+Capybara.app = Bookmarker
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

@@ -10,9 +10,9 @@ gem 'data_mapper'
 group :development, :test do
   gem 'launchy'
   gem 'shotgun'
+  gem 'rspec'
   gem 'cucumber'
   gem 'cucumber-sinatra'
   gem 'capybara'
-  gem 'rspec'
   gem 'database_cleaner'
 end
