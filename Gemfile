@@ -13,6 +13,10 @@ group :development, :test do
   gem 'rspec'
   gem 'cucumber'
   gem 'cucumber-sinatra'
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
   gem 'capybara'
   gem 'database_cleaner'
 end

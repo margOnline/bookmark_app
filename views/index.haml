@@ -1,10 +1,15 @@
-!!!
-%html
-  %head
-    %title Bookmark App
-    %link{rel: 'stylesheet', href: 'css/application.css', type: 'text/css'}
-  %body
-    %h1 Welcome to Linki.o.us
-    %section
-      %ul
-    %footer Copyright 2013 margOnline 
+%h3 Current links:
+%ul
+  - @links.each do |link|
+    %li
+      %a{:href => "#{link.url}"}= link.title
+
+#new-link
+  %form{:action => "/links", :method => "post"}
+    Url:
+    %input{:type => "text", :name => "url"}
+    Title:
+    %input{:type => "text", :name => "title"}
+    Tags:
+    %input{:type => "text", :name => "tags"}
+    %input{:type => "submit", :value => "Add link"}
