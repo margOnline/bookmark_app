@@ -8,6 +8,7 @@ DataMapper.setup(:default, "postgres://localhost/bookmark_app_#{env}")
 
 require_relative './lib/link'
 require_relative './lib/tag'
+require_relative './lib/user'
 
 DataMapper::finalize
 DataMapper.auto_upgrade!
@@ -26,6 +27,22 @@ class Bookmarker < Sinatra::Base
       Tag.first_or_create(:text => tag)
     end
     Link.create(:url => url, :title => title, :tags => tags)
+    redirect to('/')
+  end
+
+  get '/tags/:text' do
+    tag = Tag.first(:text => params[:text])
+    @links = tag ? tag.links : []
+    haml :index
+  end
+
+  get '/users/new' do
+    haml :"users/new"
+  end
+
+  post '/users' do
+    User.create(:email => params[:email],
+                :password => params[:password])
     redirect to('/')
   end
 

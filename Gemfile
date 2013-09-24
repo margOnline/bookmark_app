@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'haml'
 gem 'dm-postgres-adapter'
 gem 'data_mapper'
+gem 'sinatra-twitter-bootstrap'
 
 group :development, :test do
   gem 'launchy'
