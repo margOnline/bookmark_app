@@ -9,7 +9,7 @@
       %h1 Welcome to Linki.o.us
       - if current_user
         #welcome
-          Welcome, "#{current_user.email}"
+          Welcome, #{current_user.email}
       %section
         = yield
       %footer 
