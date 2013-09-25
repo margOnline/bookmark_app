@@ -7,6 +7,10 @@ body {
   background-image: 'img/gold-link.jpeg'
 }
 
+a{
+  color: #94C290;
+}
+
 /*#page-wrap{
   width:90%;
   margin:30px auto;
