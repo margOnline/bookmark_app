@@ -3,12 +3,19 @@
 %html
   %head
     %title Bookmark App
-    %link{rel: 'stylesheet', href: '/css/application.css', type: 'text/css'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+    %link{:rel => 'stylesheet', :href => '/css/bootstrap-rsponsive.min.css', :type => 'text/css'}
+    %link{:rel => 'stylesheet', :href => '/css/bootstrap.min.css', :type => 'text/css'}
+    %link{:rel => 'stylesheet', :href => '/css/application.css', :type => 'text/css'}
+
   %body
-    #page-wrap
-      %h1 Welcome to Linki.o.us
+    .container
+      
+      %h1 
+        %img{:src => 'img/gold-link.jpeg', :width => '45', :height => '45'}
+        Welcome to Linkalici.o.us
       - if current_user
-        #welcome
+        %p{:class => 'lead'}
           Welcome, #{current_user.email}
       %section
         = yield

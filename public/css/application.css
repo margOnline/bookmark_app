@@ -1,11 +1,13 @@
 body {
-  background-color: #e4e4e4;
-  font-family: Arial;
-  color: purple;
-  font-size: 1.25em;
+ /* background-color: #e4e4e4;*/
+  color: #587555;
 }
 
-#page-wrap{
+#link-icon{
+  background-image: 'img/gold-link.jpeg'
+}
+
+/*#page-wrap{
   width:90%;
   margin:30px auto;
 }
@@ -41,4 +43,4 @@ a:hover, a:active {
 .button:active {
   position:relative;
   top:1px;
-}
+}*/
