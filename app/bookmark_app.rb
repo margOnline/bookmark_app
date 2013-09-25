@@ -26,6 +26,10 @@ class Bookmarker < Sinatra::Base
     haml :index
   end
 
+  get '/sessions/new' do
+    haml :"sessions/new"
+  end
+
   post '/links' do
     url = params["url"]
     title = params["title"]

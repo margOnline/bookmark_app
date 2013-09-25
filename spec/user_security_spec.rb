@@ -19,6 +19,7 @@ feature "User signs up" do
     lambda {sign_up}.should change(User, :count).by(0)
     expect(page).to have_content("This email address has already been registered")
   end
+end
 
 feature "User signs in" do
 
@@ -34,10 +35,15 @@ feature "User signs in" do
     sign_in('test@test.com', 'wrong')
     expect(page).not_to have_content('Welcome, test@test.com')
   end
-end
 
+  scenario "with incorrect credentials" do
+    visit '/'
+    expect(page).not_to have_content("Welcome, test@test.com")
+    sign_in('test@test.com', 'wrong')
+    expect(page).not_to have_content("Welcome, test@test.com")
+  end
 
-  def sign_in
+  def sign_in(email, password)
     visit '/sessions/new'
     fill_in 'email', :with => email
     fill_in 'password', :with =>password
@@ -53,5 +59,4 @@ end
     fill_in :password_confirmation, :with => password_confirmation
     click_button "Sign up"
   end
-
 end
