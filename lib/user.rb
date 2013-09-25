@@ -14,7 +14,7 @@ class User
 # call DataMapper's method for validating the model
 # in this instance no user will be saved unless the password and
 # the password_confirmation match
-  validates_confirmation_of :password
+  validates_confirmation_of :password, :message => "The passwords you entered do not match, please try again"
   validates_uniqueness_of :email
 
   def password=(password)
