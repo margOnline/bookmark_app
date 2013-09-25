@@ -3,8 +3,10 @@
   %p{class: 'lead'}
     Sorry, there were the following problems with your form.
     %ul{id: 'errors'}
-      =flash[:errors].each do |error|
-        %li{class: 'error'}
+      -flash[:errors].each do |error|
+        %li{class: 'text-error'}
+          =error
+
 %h1 Please sign up
 %form{:action => "/users", :method => "post"}
   %p 
