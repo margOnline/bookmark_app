@@ -43,6 +43,7 @@ class Bookmarker < Sinatra::Base
 
   get '/users/new' do
     # in quotes because ruby would try to divide the symbol by new
+    @user = User.new
     haml :"users/new"
   end
 
@@ -54,7 +55,7 @@ class Bookmarker < Sinatra::Base
       session[:user_id] = @user.id
       redirect to('/')
     else
-      flash[:notice] = 'Your passwords do not match, please try again.'
+      flash.now[:errors] = @user.errors.full_messages
       haml :"users/new"
     end
   end

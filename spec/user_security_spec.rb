@@ -9,9 +9,15 @@ feature "User signs up" do
   end
 
   scenario "with a password that doesn't match" do
-    lambda { sign_up('a@a.com', 'pass', 'wrong')}.should change(User:count).by(0)
+    lambda { sign_up('a@a.com', 'pass', 'wrong')}.should change(User,:count).by(0)
     expect(current_path).to eq('/users')
     expect(page).to have_content("Your passwords do not match, please try again.")
+  end
+
+  scenario "with an email that is already registered" do
+    lambda {sign_up}.should change(User, :count).by(1)
+    lambda {sign_up}.should change(User, :count).by(0)
+    expect(page).to have_content("This email address has already been registered")
   end
 
   def sign_up(email = "alice@example.com",

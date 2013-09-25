@@ -7,7 +7,7 @@ env = ENV["RACK_ENV"] || "development"
 DataMapper.setup(:default, "postgres://localhost/bookmark_app_#{env}")
 
 # after declaring the model, you need to finalise them
-DataMapper.finalize
+DataMapper::finalize
 
 # make non-destructive changes - if they tables don't exist, they
 # will be created. If they do and the schema has changed, 
