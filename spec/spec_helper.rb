@@ -9,7 +9,7 @@ ENV["RACK_ENV"] = 'test'
 #the require of spec_helper needs to go after the env statement because
 # the server needs to know which environment its running. The environment
 # determines what d/b to use.
-require './bookmark_app'
+require './app/bookmark_app'
 require 'database_cleaner'
 require 'capybara/rspec'
 

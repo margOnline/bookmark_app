@@ -8,6 +8,7 @@ gem 'dm-postgres-adapter'
 gem 'data_mapper'
 gem 'sinatra-twitter-bootstrap'
 gem 'bcrypt-ruby'
+gem 'rack-flash3'
 
 group :development, :test do
   gem 'launchy'
