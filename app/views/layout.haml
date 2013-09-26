@@ -9,21 +9,10 @@
     %link{:rel => 'stylesheet', :href => '/css/application.css', :type => 'text/css'}
 
   %body
-    .container
-      %h1 
-        %img{:src => '/img/gold-link.jpeg', :width => '45', :height => '45'}
-        Welcome to Linkalici.o.us
-      - if current_user
-        %p{:class => 'lead'}
-          Welcome, #{current_user.email}
-          %form{method: 'post', action: '/sessions'}
-            %input{type: 'hidden', name: '_method', value: 'delete'}
-            %input{type: 'submit', value: 'Sign out'}
-      - if flash[:notice]
-        #notice=flash[:notice]
-      %section
-        = yield
-      %footer 
-        Copyright 2013 
-        %a{href: "http://www.margonline.co.uk"}
-          margOnline 
+    = :welcome_message
+    = :flash
+    = yield
+  %footer 
+    Copyright 2013 
+    %a{href: "http://www.margonline.co.uk"}
+      margOnline 
