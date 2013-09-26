@@ -1,19 +1,5 @@
-%h3 Current links:
-%ul
+Current Links
+#links-container
+  %ul{id: 'links'}
   - @links.each do |link|
-    %li
-      %a{:href => "#{link.url}"}= link.title
-
-#new-link
-  %form{:action => "/links", :method => "post"}
-    %p 
-      Url:
-      %input{:type => "text", :name => "url"}
-    %p 
-      Title:
-      %input{:type => "text", :name => "title"}
-    %p 
-      Tags:
-      %input{:type => "text", :name => "tags"}
-    %p
-      %input{:type => "submit", :class => 'button', :value => "Add link"}
+    = partial :link, locals: {link: link }

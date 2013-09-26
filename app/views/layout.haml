@@ -2,20 +2,14 @@
 %html
   %head
     %title Bookmark App
-    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
-    %link{:rel => 'stylesheet', :href => '/css/bootstrap-responsive.min.css', :type => 'text/css'}
-    %link{:rel => 'stylesheet', :href => '/css/bootstrap.min.css', :type => 'text/css'}
+    %link{:rel => 'stylesheet', :href => '/css/reset.css', :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/application.css', :type => 'text/css'}
 
   %body
-    .container
-      %h1 
-        %img{:src => '/img/gold-link.jpeg', :width => '45', :height => '45'}
-        Welcome to Linkalici.o.us
-      = partial :welcome_message
-      = partial :flash
-      = yield
-      %footer 
-        Copyright 2013 
-        %a{href: "http://www.margonline.co.uk"}
-          margOnline
+    = partial :header
+    = partial :flash
+    = yield
+    %footer 
+      Copyright 2013 
+      %a{href: "http://www.margonline.co.uk"}
+        margOnline
