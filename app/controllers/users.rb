@@ -1,7 +1,5 @@
-class Users < Sinatra::Base
+class Users < BookmarkApp
 
-  set :views, File.join(File.dirname(__FILE__), '..', 'views')
-  
   get '/users/new' do
     # in quotes because ruby would try to divide the symbol by new
     @user = User.new

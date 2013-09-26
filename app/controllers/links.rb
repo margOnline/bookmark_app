@@ -1,5 +1,5 @@
 class Links < Sinatra::Base
-  set :views, File.join(File.dirname(__FILE__), '..', 'views')
+  
   post '/links' do
     url = params["url"]
     title = params["title"]
