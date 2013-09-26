@@ -1,18 +1,21 @@
--# layout.haml
 !!!
 %html
   %head
     %title Bookmark App
     %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
-    %link{:rel => 'stylesheet', :href => '/css/bootstrap-rsponsive.min.css', :type => 'text/css'}
+    %link{:rel => 'stylesheet', :href => '/css/bootstrap-responsive.min.css', :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/bootstrap.min.css', :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/application.css', :type => 'text/css'}
 
   %body
-    = :welcome_message
-    = :flash
-    = yield
-  %footer 
-    Copyright 2013 
-    %a{href: "http://www.margonline.co.uk"}
-      margOnline 
+    .container
+      %h1 
+        %img{:src => '/img/gold-link.jpeg', :width => '45', :height => '45'}
+        Welcome to Linkalici.o.us
+      = :welcome_message
+      = :flash
+      = yield
+      %footer 
+        Copyright 2013 
+        %a{href: "http://www.margonline.co.uk"}
+          margOnline
