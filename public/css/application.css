@@ -1,20 +1,33 @@
+*{
+  box-sizing:border-box;
+}
+html, body{
+  height: 100%;
+}
 
 body {
   font-family: Helvetica, Arial, Sans-serif;
-  background-image: url(/images/extra_clean_paper.png);
+  background-image: url(/img/extra_clean_paper.png);
   color:#333;
 }
-
+.wrapper{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4.4em;
+}
 
 a{
   text-decoration: none;
   color: #b77843
 }
 
-a.button {
+.button {
   display:inline-block;
-  width:80px;
+  width:110px;
   background-color: #82b743;
+  cursor: pointer;
+  font-size: 16px;
   border: 2px solid white;
   color: white;
   padding: 5px 10px;
@@ -24,31 +37,42 @@ a.button {
   margin-right: 5px;
   text-shadow: 0 0 2px rgba(0,0,0,0.4);
 }
+a.button.highlighted{
+  background-color: #b77843;
+}
+
 header {
   height: 40px;
   background-color: black;
   display: flex;
   padding:0 20px;
+  color:white;
 }
 
 header > * {
   margin: auto 0;
 }
 
+header #logo {
+  display: flex;
+  margin-right: 20px;
+}
 header a {
   color: white;
 }
 
-header #user-links {
-  flex: 1;
-  -webkit-flex:1;
-  text-align: right;
+header #user-links > *{
+  display: inline-block;
+}
+
+header #user-links #welcome-message{
+  font-size: 14px;
 }
 
 #links-container{
   background-color: white;
   margin: 40px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.4)
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
   padding:10px;
 }
 
@@ -57,6 +81,7 @@ header #user-links {
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   margin:10px inherit;
   padding: 15px 10px;
+  list-style: none;
 }
 
 .link a.title {
@@ -72,7 +97,43 @@ header #user-links {
 }
 
 footer{
-  margin:40px;
+  display:flex;
+  background-color: rgba(0,0,0,0.2);
+}
+
+footer > * {
+  margin: auto inherit;
+}
+
+footer img {
+  vertical-align: top;
+}
+
+footer #technologies {
+  -webkit-flex: 1;
+  flex:1;
+}
+footer p{
+  padding: 5px 25px;
+}
+
+footer, .push{
+  height: 4.4em;
+}
+
+footer #copyright{
+  float:right;
+  padding-right: 40px;
+}
+
+#notice{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(67,183,120,0.75);
+  border-radius:4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  color:white;
 }
 
 /*

@@ -6,7 +6,9 @@
     %link{:rel => 'stylesheet', :href => '/css/application.css', :type => 'text/css'}
 
   %body
-    = partial :header
-    = partial :flash
-    = yield
+    .wrapper
+      = partial :header
+      = partial :flash
+      = yield
+      .push
     = partial :footer
