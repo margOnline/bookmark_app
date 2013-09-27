@@ -1,4 +1,4 @@
-class Sessions < Sinatra::Base
+class Sessions < BookmarkApp
   
   get '/sessions/new' do
     haml :"sessions/new"

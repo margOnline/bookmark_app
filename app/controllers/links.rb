@@ -1,4 +1,4 @@
-class Links < Sinatra::Base
+class Links < BookmarkApp
   
   get '/links/new' do
     haml :"links/new"

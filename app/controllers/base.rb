@@ -8,4 +8,5 @@ class BookmarkApp < Sinatra::Base
   register Sinatra::Partial
   set :views, File.join(File.dirname(__FILE__), '..', 'views')
   set :partial_template_engine, :haml
+  set :public_folder, File.join(File.dirname(__FILE__), '..', 'public')
 end

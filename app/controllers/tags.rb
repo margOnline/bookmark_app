@@ -1,4 +1,4 @@
-class Tags < Sinatra::Base
+class Tags < BookmarkApp
  
   get '/tags/:text' do
     tag = Tag.first(:text => params[:text])

@@ -8,3 +8,4 @@ DataMapper.setup(:default, "postgres://localhost/bookmark_app_#{env}")
 
 # after declaring the model, you need to finalise them
 DataMapper.finalize
+ 
