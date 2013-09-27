@@ -1,5 +1,9 @@
 class Links < Sinatra::Base
   
+  get '/links/new' do
+    haml :"links/new"
+  end
+  
   post '/links' do
     url = params["url"]
     title = params["title"]
