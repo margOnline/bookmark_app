@@ -26,6 +26,7 @@ class Bookmarker < Sinatra::Base
   set :views, File.join(File.dirname(__FILE__), '..', 'views')
   set :partial_template_engine, :haml
   set :public_folder, File.join(File.dirname(__FILE__), '..', 'public')
+
 ######### DEFINE ROUTE PATHS #########
   
   get('/') { Home.call(env) }
