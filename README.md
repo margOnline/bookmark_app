@@ -19,13 +19,13 @@ A bookmark manager is a website to maintain a collection of links, organised by 
 <li>Gems
   <ul>
   <li>Sinatra</li>
-  <li>dm-postgres-adapter><li>
+  <li>dm-postgres-adapter></li>
   <li>Rspec-rails</li>
   <li>Capybara</li>
   <li>Haml</li>
-  <li>sinatra-partial<li>
-  <li>rack-flash3<li>
-  <li>database_cleaner<li>
+  <li>sinatra-partial</li>
+  <li>rack-flash3</li>
+  <li>database_cleaner</li>
 </ul>
 <h4>Contributors</h4>
 <ul>
